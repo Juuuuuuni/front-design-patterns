@@ -1,13 +1,13 @@
-import { Theme } from "../types/theme";
-import { TextBox } from "./TextBox";
-import { Box } from "./Box";
+import { Theme } from "../../types/theme";
+import { TextBox } from "../TextBox";
+import { Box } from "../Box";
 
 interface FirstChildrenProps {
   theme?: Theme;
 }
 
 export const ThirdChildren = (props: FirstChildrenProps) => {
-    const { theme } = props;
+  const { theme } = props;
   return (
     <div
       style={{
@@ -18,7 +18,10 @@ export const ThirdChildren = (props: FirstChildrenProps) => {
       }}
     >
       <Box title="Third Child" background="green">
-        <TextBox content={`Props: ${JSON.stringify(props)}`} border={theme?.palette.border} />
+        <TextBox
+          content={`Props: ${JSON.stringify(props)}`}
+          border={theme?.palette.border}
+        />
       </Box>
       <Box title="Third Child" background="green">
         <TextBox content={`Props: ${JSON.stringify(props)}`} />

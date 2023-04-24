@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { Theme } from "../types/theme";
-import { Box } from "./Box";
-import { TextBox } from "./TextBox";
+import { Theme } from "../../types/theme";
+import { Box } from "../Box";
+import { TextBox } from "../TextBox";
 import { FirstChildren } from "./FirstChildren";
+import { darkPalette, lightPalette } from "../../theme/palette";
 
-const lightPalette = { palette: { border: "5px solid white" } };
-const darkPalette = { palette: { border: "5px solid black" } };
 export const PlainComponent = () => {
   const [theme, setTheme] = useState<Theme>(lightPalette);
 
-  console.log("PlainCompoent");
   const onClickMode = (mode: "LIGHT" | "DARK") => {
     if (mode === "LIGHT") {
       setTheme(lightPalette);

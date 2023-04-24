@@ -1,6 +1,5 @@
-
 export type Theme = {
-    palette: {
-        border: string;
-    }
+  palette: {
+    border: string;
+  };
 };

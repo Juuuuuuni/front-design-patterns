@@ -14,11 +14,11 @@ export const Box = ({ background, title, width, children }: BoxProps) => {
         flexDirection: "column",
         justifyContent: "flex-start",
         color: "black",
-          overflow: "hidden",
+        overflow: "hidden",
         gap: "30px",
         width: width ?? "45%",
         alignItems: "center",
-          background,
+        background,
       }}
     >
       {title}

@@ -1,6 +1,6 @@
-import { Theme } from "../types/theme";
-import { TextBox } from "./TextBox";
-import { Box } from "./Box";
+import { Theme } from "../../types/theme";
+import { TextBox } from "../TextBox";
+import { Box } from "../Box";
 import { SecondChildren } from "./SecondChildren";
 
 interface FirstChildrenProps {
