@@ -22,11 +22,11 @@ export const FirstChildren = (props: FirstChildrenProps) => {
         >
           <Box title="First Child" background="orange">
             <TextBox content={`Props: ${JSON.stringify(props)}`} />
-            {/*<SecondChildren theme={props.theme} />*/}
+            <SecondChildren theme={props.theme} />
           </Box>
           <Box title="First Child" background="orange">
             <TextBox content={`Props: ${JSON.stringify(props)}`} />
-            {/*<SecondChildren theme={props.theme} />*/}
+            <SecondChildren theme={props.theme} />
           </Box>
         </div>
       )}
