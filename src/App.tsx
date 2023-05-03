@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import { ProviderPatternMain } from "~/components/ProviderPattern/ProviderPatternMain";
-import { ObserverPatternMain } from "~/components/ObserverPattern/ObserverPatternMain";
-import { ObserverPatternAboutRuleBook } from "~/components/ObserverPattern/ObserverPatternAboutRuleBook";
+import { ObserverPatternMain } from "~/components/ObserverPattern/basicExample/ObserverPatternMain";
+import { ObserverPatternAboutRuleBook } from "~/components/ObserverPattern/ruleBookExample/ObserverPatternAboutRuleBook";
 type Pattern = "PROVIDER_PATTERN" | "OBSERVER_PATTERN";
 
 function App() {

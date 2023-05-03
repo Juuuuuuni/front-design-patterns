@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
-import { Button, TextField, Typography } from "@material-ui/core";
-import { RuleBook } from "~/components/ObserverPattern/RoolBook";
+import { Button, TextField, Typography } from "@mui/material";
+
+import { RuleBook } from "~/components/ObserverPattern/ruleBookExample/RoolBook";
 
 const defaultRules = [
   "refresh vacation",

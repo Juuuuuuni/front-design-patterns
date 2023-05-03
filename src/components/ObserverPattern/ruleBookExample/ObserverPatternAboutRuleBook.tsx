@@ -1,9 +1,9 @@
-import { ToastContainer, toast } from "react-toastify";
-import { Observable } from "~/components/ObserverPattern/Observable";
+import { toast } from "react-toastify";
+import { Observable } from "~/components/ObserverPattern/basicExample/Observable";
 import "react-toastify/dist/ReactToastify.css";
-import { Button, FormControlLabel, Switch } from "@material-ui/core";
-import { HRTeam } from "~/components/ObserverPattern/HRTeam";
-import { DevelopmentTeam } from "~/components/ObserverPattern/DevelopmentTeam";
+import { HRTeam } from "~/components/ObserverPattern/ruleBookExample/HRTeam";
+import { DevelopmentTeam } from "~/components/ObserverPattern/ruleBookExample/DevelopmentTeam";
+import { Box } from "@mui/material";
 
 const logger = (data) => {
   console.log(`${Date.now()} ${data}`);
@@ -30,9 +30,13 @@ export const ObserverPatternAboutRuleBook = () => {
   };
 
   return (
-    <div className="App">
-      <HRTeam />
-      <DevelopmentTeam />
-    </div>
+    <Box id="rulebook-root" sx={{ display: "flex", flexDirection: "row" }}>
+      <Box>
+        <HRTeam />
+      </Box>
+      <Box>
+        <DevelopmentTeam />
+      </Box>
+    </Box>
   );
 };

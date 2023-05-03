@@ -1,6 +1,6 @@
-import { Box, Button, Typography } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { RuleBook } from "~/components/ObserverPattern/RoolBook";
+import { RuleBook } from "~/components/ObserverPattern/ruleBookExample/RoolBook";
+import { Box, Typography } from "@mui/material";
 
 export const DevelopmentTeam = () => {
   const [companyRegulations, setCompanyRegulations] = useState<string[]>([]);

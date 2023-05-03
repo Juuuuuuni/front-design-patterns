@@ -1,5 +1,5 @@
 import { ToastContainer, toast } from "react-toastify";
-import { Observable } from "~/components/ObserverPattern/Observable";
+import { Observable } from "~/components/ObserverPattern/basicExample/Observable";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, FormControlLabel, Switch } from "@material-ui/core";
 
