@@ -1,8 +1,8 @@
-import { Theme } from "../../types/theme";
-import { TextBox } from "../TextBox";
-import { Box } from "../Box";
+import { Theme } from '~/types/theme';
+import { TextBox } from '~/components/ProviderPattern/TextBox';
+import { Box } from '~/components/ProviderPattern/Box';
 
-import { ThemeContext } from "./context/ThemeContext";
+import { ThemeContext } from '~/components/ProviderPattern/withProvider/context/ThemeContext';
 
 interface FirstChildrenProps {
   theme?: Theme;
@@ -14,10 +14,10 @@ export const ThirdChildren = (props: FirstChildrenProps) => {
       {(value) => (
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-around",
+            display: 'flex',
+            justifyContent: 'space-around',
             gap: 10,
-            height: "400px",
+            height: '400px',
           }}
         >
           <Box title="Third Child" background="green">

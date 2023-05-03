@@ -1,27 +1,28 @@
-import { useState } from "react";
-import "./App.css";
-import { PlainComponent } from "./components/withoutProvider/PlainComponent";
-import { ProviderPatternComponent } from "./components/withProvider/ProviderPatternComponent";
+import { useState } from 'react';
+import './App.css';
+import { ProviderPatternMain } from '~/components/ProviderPattern/ProviderPatternMain';
+import { ObserverPatternMain } from '~/components/ObserverPattern/ObserverPatternMain';
+type Pattern = 'PROVIDER_PATTERN' | 'OBSERVER_PATTERN';
 
 function App() {
-  const [chapter, setChapter] = useState<
-    "PROVIDER_PATTERN" | "WITHOUT_PROVIDER_PATTERN" | null
-  >(null);
+  const [chapter, setChapter] = useState<Pattern | null>(null);
 
   if (!chapter) {
     return (
       <div width="1200px" height="800px" background="red">
         Choose
-        <button onClick={() => setChapter("WITHOUT_PROVIDER_PATTERN")}>
-          Plain
+        <button onClick={() => setChapter('PROVIDER_PATTERN')}>
+          Provider Pattern
         </button>
-        <button onClick={() => setChapter("PROVIDER_PATTERN")}>Provider</button>
+        <button onClick={() => setChapter('OBSERVER_PATTERN')}>
+          Observer Pattern
+        </button>
       </div>
     );
-  } else if (chapter === "PROVIDER_PATTERN") {
-    return <ProviderPatternComponent />;
-  } else {
-    return <PlainComponent />;
+  } else if (chapter === 'PROVIDER_PATTERN') {
+    return <ProviderPatternMain />;
+  } else if (chapter === 'OBSERVER_PATTERN') {
+    return <ObserverPatternMain />;
   }
 }
 
