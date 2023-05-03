@@ -1,5 +1,7 @@
-import { ToastContainer, toast } from 'react-toastify';
-import { Observable } from '~/components/ObserverPattern/Observable';
+import { ToastContainer, toast } from "react-toastify";
+import { Observable } from "~/components/ObserverPattern/Observable";
+import "react-toastify/dist/ReactToastify.css";
+import { Button, FormControlLabel, Switch } from "@material-ui/core";
 
 const logger = (data) => {
   console.log(`${Date.now()} ${data}`);
@@ -17,19 +19,23 @@ Observable.instance.subscribe(logger);
 Observable.instance.subscribe(toastify);
 
 export const ObserverPatternMain = () => {
-  const onClickFirstButton = () => {
-    Observable.instance.notify('First Button Clicked!!!');
+  const onClickButton = () => {
+    Observable.instance.notify("Button Clicked!!!");
   };
 
-  const onClickSecondButton = () => {
-    Observable.instance.notify('Second Button Clicked!!!!!!!!!!!');
+  const onClickToggle = () => {
+    Observable.instance.notify("Toggle Clicked!!!!!!!!!!!");
   };
 
   return (
     <div className="App">
-      <button onClick={onClickFirstButton}>Click First Button!</button>
-
-      <button onClick={onClickSecondButton}>Click Second Button!</button>
+      <Button variant="contained" onClick={onClickButton}>
+        Click me!
+      </Button>
+      <FormControlLabel
+        control={<Switch name="" onChange={onClickToggle} />}
+        label="Toggle me!"
+      />
       <ToastContainer />
     </div>
   );
