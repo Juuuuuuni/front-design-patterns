@@ -1,5 +1,5 @@
-import { Fragment, useEffect, useState } from "react";
-import { Button, TextField, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Box, Button, Typography } from "@mui/material";
 
 import { RuleBook } from "~/components/ObserverPattern/ruleBookExample/RoolBook";
 
@@ -27,13 +27,24 @@ export const HRTeam = () => {
   }, []);
 
   return (
-    <Fragment>
+    <Box sx={{ background: "#1A0000", padding: "10px" }}>
+      <Box>
+        <Typography variant="h3">HR Team business</Typography>
+      </Box>
       {rules.map((rule, index) => (
-        <Fragment key={index}>
-          <Typography>{rule}</Typography>{" "}
-          <Button onClick={() => onRemoveRule(rule)}>-</Button>
-        </Fragment>
+        <Box
+          sx={{ display: "flex", gap: "10px", alignItems: "center" }}
+          key={index}
+        >
+          <Typography variant="h5">{rule}</Typography>{" "}
+          <Button
+            sx={{ background: "#660000" }}
+            onClick={() => onRemoveRule(rule)}
+          >
+            -
+          </Button>
+        </Box>
       ))}
-    </Fragment>
+    </Box>
   );
 };

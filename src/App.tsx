@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import { ProviderPatternMain } from "~/components/ProviderPattern/ProviderPatternMain";
 import { ObserverPatternMain } from "~/components/ObserverPattern/basicExample/ObserverPatternMain";
-import { ObserverPatternAboutRuleBook } from "~/components/ObserverPattern/ruleBookExample/ObserverPatternAboutRuleBook";
 type Pattern = "PROVIDER_PATTERN" | "OBSERVER_PATTERN";
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
   } else if (chapter === "PROVIDER_PATTERN") {
     return <ProviderPatternMain />;
   } else if (chapter === "OBSERVER_PATTERN") {
-    return <ObserverPatternAboutRuleBook />;
+    return <ObserverPatternMain />;
   }
 }
 
