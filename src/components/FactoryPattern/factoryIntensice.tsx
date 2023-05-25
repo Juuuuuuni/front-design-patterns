@@ -15,11 +15,6 @@ export class UserPasswordFactory {
     });
   }
 
-  /**
-   * 입력된 비밀번호가 규칙에 맞는지 검증합니다. (영문+숫자+특수문자, 총 8글자 이상)
-   * @param password 검증할 비밀번호 문자열
-   * @returns 통과 여부 boolean
-   */
   private static validate(password: string): boolean {
     if (typeof password !== "string") {
       return false;
@@ -29,5 +24,4 @@ export class UserPasswordFactory {
   }
 }
 
-// 사용 예시
 user.password = UserPasswordFactory.create(inputPassword);
